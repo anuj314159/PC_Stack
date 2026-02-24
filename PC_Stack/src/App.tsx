@@ -7,6 +7,7 @@ import Gpu from './components/Gpu';
 import Ram from './components/Ram';
 import Storage from './components/Storage';
 import Motherboard from './components/Motherboard';
+import Container from './components/Container';
 import Nvidia from './components/Nvidia';
 import Amd from './components/Amd';
 import Intel from './components/Intel';
@@ -14,11 +15,11 @@ import WesternDigital from './components/WesternDigital';
 import Corsair from './components/Corsair';
 
 const App: React.FC = () => {
-  const [route, setRoute] = useState(window.location.hash);
+  const [route, setRoute] = useState(window.location.hash || '#home');
 
   useEffect(() => {
     const handleHashChange = () => {
-      setRoute(window.location.hash);
+      setRoute(window.location.hash || '#home');
     };
 
     window.addEventListener('hashchange', handleHashChange);
@@ -29,6 +30,15 @@ const App: React.FC = () => {
 
   const renderContent = () => {
     switch (route) {
+      case '#home':
+        return (
+          <Container title="Welcome to PC_Stack!" iconName="home-outline">
+            <div className="home-content">
+              <h2>Your one-stop shop for PC components</h2>
+              <p>Explore our wide range of products and build your dream PC today.</p>
+            </div>
+          </Container>
+        )
       case '#cpus':
         return <Cpu />;
       case '#gpus':
@@ -41,30 +51,23 @@ const App: React.FC = () => {
         return <Motherboard />;
       case '#brands':
         return (
-          <>
+          <Container title="Brands" iconName="bookmark-outline">
             <Nvidia />
             <Amd />
             <Intel />
             <WesternDigital />
             <Corsair />
-          </>
+          </Container>
         );
       default:
         return (
-          <>
-            <section id="cpus"><Cpu /></section>
-            <section id="gpus"><Gpu /></section>
-            <section id="ram"><Ram /></section>
-            <section id="storage"><Storage /></section>
-            <section id="motherboards"><Motherboard /></section>
-            <h2 id="brands">Brands</h2>
-            <section id="nvidia"><Nvidia /></section>
-            <section id="amd"><Amd /></section>
-            <section id="intel"><Intel /></section>
-            <section id="wd"><WesternDigital /></section>
-            <section id="corsair"><Corsair /></section>
-          </>
-        );
+          <Container title="Welcome to PC_Stack!" iconName="home-outline">
+            <div className="home-content">
+              <h2>Your one-stop shop for PC components</h2>
+              <p>Explore our wide range of products and build your dream PC today.</p>
+            </div>
+          </Container>
+        )
     }
   };
 
@@ -80,3 +83,4 @@ const App: React.FC = () => {
 };
 
 export default App;
+

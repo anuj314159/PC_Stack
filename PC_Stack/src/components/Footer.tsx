@@ -4,7 +4,14 @@ import './Footer.css';
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
-      <p>&copy; 2026 PC_Stack. All rights reserved.</p>
+      <div className="footer-content">
+        <p>&copy; 2026 PC_Stack. All rights reserved.</p>
+        <div className="social-links">
+          <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+          <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+        </div>
+      </div>
     </footer>
   );
 };

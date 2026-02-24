@@ -2,10 +2,11 @@ import React from 'react';
 
 const Intel: React.FC = () => {
   return (
-    <div className="brand-section">
-      <h2>Intel Products</h2>
+    <div className="brand-card">
+      <div className="brand-logo-placeholder">Intel Logo</div>
+      <h3>Intel</h3>
       <p>Experience the power of Intel processors.</p>
-      {/* Add more content here */}
+      <a href="#cpus">View Products</a>
     </div>
   );
 };

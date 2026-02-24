@@ -1,38 +1,53 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  --primary-bg: #ffffff;
+  --secondary-bg: #f8f9fa;
+  --header-bg: #ffffff;
+  --text-color: #212529;
+  --accent-color: #008080; /* Darker Teal */
+  --border-color: #dee2e6;
+  --link-color: #008080;
+  --link-hover-color: #005959;
+  --light-yellow: #fffff0; /* Light Yellow */
+}
+
+body.dark {
+  --primary-bg: #121212;
+  --secondary-bg: #1e1e1e;
+  --header-bg: #1e1e1e;
+  --text-color: #e0e0e0;
+  --accent-color: #26a69a; /* A teal shade for dark mode */
+  --border-color: #2c2c2c;
+  --link-color: #26a69a;
+  --link-hover-color: #00796b;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  color: var(--text-color);
+  background-color: var(--primary-bg);
+  margin: 0;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s;
 }
+
 a:hover {
-  color: #535bf2;
+  color: var(--link-hover-color);
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 button {
@@ -42,27 +57,6 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  transition: border-color 0.25s, background-color 0.25s;
 }

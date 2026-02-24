@@ -1,12 +1,25 @@
 import React from 'react';
+import Container from './Container';
 
 const Gpu: React.FC = () => {
   return (
-    <div className="component-section">
-      <h2>GPUs</h2>
-      <p>Explore our wide range of graphics cards.</p>
-      {/* Add more content here */}
-    </div>
+    <Container title="GPUs" iconName="game-controller-outline">
+      <div className="product-card">
+        <img src="https://via.placeholder.com/300x200" alt="GPU Model 1" className="product-image-placeholder" />
+        <h3>GPU Model 1</h3>
+        <p>Price: $799</p>
+      </div>
+      <div className="product-card">
+        <img src="https://via.placeholder.com/300x200" alt="GPU Model 2" className="product-image-placeholder" />
+        <h3>GPU Model 2</h3>
+        <p>Price: $999</p>
+      </div>
+      <div className="product-card">
+        <img src="https://via.placeholder.com/300x200" alt="GPU Model 3" className="product-image-placeholder" />
+        <h3>GPU Model 3</h3>
+        <p>Price: $1299</p>
+      </div>
+    </Container>
   );
 };
 

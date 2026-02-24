@@ -2,10 +2,11 @@ import React from 'react';
 
 const Nvidia: React.FC = () => {
   return (
-    <div className="brand-section">
-      <h2>Nvidia Products</h2>
+    <div className="brand-card">
+      <div className="brand-logo-placeholder">Nvidia Logo</div>
+      <h3>Nvidia</h3>
       <p>The world's most powerful graphics cards.</p>
-      {/* Add more content here */}
+      <a href="#gpus">View Products</a>
     </div>
   );
 };

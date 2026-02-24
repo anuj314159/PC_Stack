@@ -1,30 +1,91 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0;
-  text-align: center;
-}
+.home-content {
+    text-align: center;
+    padding: 4rem 0;
+}.component-section {
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .component-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  .component-section h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  
+  .component-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .product-card, .brand-card {
+    background-color: var(--primary-bg);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
 
-.App {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+  .product-card:hover, .brand-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-image-placeholder, .brand-logo-placeholder {
+    width: 100%;
+    height: 180px;
+    background-color: var(--secondary-bg);
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: var(--text-color);
+  }
+  
+  .product-card h3, .brand-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+  }
+  
+  .product-card p {
+    margin: 0.25rem 0;
+    color: var(--accent-color);
+    font-weight: 600;
+  }
+  
+  .brand-card p {
+    margin-bottom: 1rem;
+  }
 
-main {
-  flex: 1;
-  padding: 2rem;
-}
-
-.component-section, .brand-section {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-radius: 8px;
-}
-
-.component-section h2, .brand-section h2 {
-  margin-top: 0;
-  color: #333;
-}
+  .brand-card a {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .brand-card a:hover {
+    background-color: var(--link-hover-color);
+  }
+  
