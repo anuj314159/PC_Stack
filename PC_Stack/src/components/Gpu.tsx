@@ -1,24 +1,21 @@
 import React from 'react';
 import Container from './Container';
+import { gpus } from '../utils/products';
 
 const Gpu: React.FC = () => {
   return (
     <Container title="GPUs" iconName="game-controller-outline">
-      <div className="product-card">
-        <img src="https://via.placeholder.com/300x200" alt="GPU Model 1" className="product-image-placeholder" />
-        <h3>GPU Model 1</h3>
-        <p>Price: $799</p>
-      </div>
-      <div className="product-card">
-        <img src="https://via.placeholder.com/300x200" alt="GPU Model 2" className="product-image-placeholder" />
-        <h3>GPU Model 2</h3>
-        <p>Price: $999</p>
-      </div>
-      <div className="product-card">
-        <img src="https://via.placeholder.com/300x200" alt="GPU Model 3" className="product-image-placeholder" />
-        <h3>GPU Model 3</h3>
-        <p>Price: $1299</p>
-      </div>
+      {gpus.map((gpu) => (
+        <div className="product-card" key={gpu.name}>
+          {gpu.image ? (
+            <img src={gpu.image} alt={gpu.name} className="product-image" />
+          ) : (
+            <div className="product-image-placeholder">No image available</div>
+          )}
+          <h3>{gpu.name}</h3>
+          <p>{gpu.details}</p>
+        </div>
+      ))}
     </Container>
   );
 };

@@ -1,24 +1,21 @@
 import React from 'react';
 import Container from './Container';
+import { cpus } from '../utils/products';
 
 const Cpu: React.FC = () => {
   return (
     <Container title="CPUs" iconName="hardware-chip-outline">
-      <div className="product-card">
-        <img src="https://via.placeholder.com/300x200" alt="CPU Model 1" className="product-image-placeholder" />
-        <h3>CPU Model 1</h3>
-        <p>Price: $299</p>
-      </div>
-      <div className="product-card">
-        <img src="https://via.placeholder.com/300x200" alt="CPU Model 2" className="product-image-placeholder" />
-        <h3>CPU Model 2</h3>
-        <p>Price: $399</p>
-      </div>
-      <div className="product-card">
-        <img src="https://via.placeholder.com/300x200" alt="CPU Model 3" className="product-image-placeholder" />
-        <h3>CPU Model 3</h3>
-        <p>Price: $499</p>
-      </div>
+      {cpus.map((cpu) => (
+        <div className="product-card" key={cpu.name}>
+          {cpu.image ? (
+            <img src={cpu.image} alt={cpu.name} className="product-image" />
+          ) : (
+            <div className="product-image-placeholder">No image available</div>
+          )}
+          <h3>{cpu.name}</h3>
+          <p>{cpu.details}</p>
+        </div>
+      ))}
     </Container>
   );
 };

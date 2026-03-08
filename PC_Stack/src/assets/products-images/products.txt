@@ -1,0 +1,225 @@
+
+
+CPU
+
+Title: Intel Core i3-10100 10th Gen Desktop Processor
+Description: The Intel Core i3-10100 is a solid entry-level processor designed for everyday computing, light gaming, and office workloads. Built on Intel’s 10th generation architecture, it offers smooth multitasking, reliable performance, and integrated graphics, making it a great choice for budget desktop builds.
+Specs: 4 Cores / 8 Threads, Base Clock 3.6GHz, Boost Clock up to 4.3GHz, Socket LGA1200, 6MB Intel Smart Cache, Integrated Intel UHD Graphics 630, 65W TDP
+
+------------------------------------------------
+
+Title: Intel Core i5-12400 12th Gen Desktop Processor
+Description: The Intel Core i5-12400 delivers excellent mid-range performance for gamers and creators. With its efficient hybrid architecture and strong single-core speeds, it handles modern games, productivity tasks, and multitasking with ease. A perfect upgrade for a powerful yet affordable system.
+Specs: 6 Performance Cores / 12 Threads, Base Clock 2.5GHz, Boost up to 4.4GHz, Socket LGA1700, 18MB Intel Smart Cache, Supports DDR4 & DDR5, 65W TDP
+
+------------------------------------------------
+
+Title: Intel Core i7-12700K 12th Gen Unlocked Processor
+Description: The Intel Core i7-12700K is built for enthusiasts who need serious computing power. Its hybrid architecture combines performance and efficiency cores to deliver exceptional gaming performance and heavy multitasking capabilities. Ideal for content creators and high-end gaming PCs.
+Specs: 12 Cores (8P + 4E) / 20 Threads, Boost Clock up to 5.0GHz, Socket LGA1700, 25MB Cache, Unlocked for Overclocking, Supports DDR4 / DDR5
+
+------------------------------------------------
+
+Title: Intel Core i9-12900K 12th Gen Flagship Processor
+Description: The Intel Core i9-12900K is a powerhouse processor designed for extreme performance. Perfect for high-end gaming, streaming, 3D rendering, and professional workloads, it provides blazing fast speeds and advanced multitasking capability.
+Specs: 16 Cores (8P + 8E) / 24 Threads, Boost up to 5.2GHz, Socket LGA1700, 30MB Cache, Unlocked Multiplier, Supports DDR5 / DDR4
+
+------------------------------------------------
+
+Title: AMD Ryzen 3 2200G Processor (2nd Gen Ryzen Series)
+Description: The AMD Ryzen 3 2200G is a budget-friendly processor with powerful integrated Vega graphics. Ideal for entry-level gaming and home PCs, it allows users to build a capable system without needing a dedicated GPU.
+Specs: 4 Cores / 4 Threads, Base Clock 3.5GHz, Boost up to 3.7GHz, Socket AM4, Radeon Vega 8 Graphics, 65W TDP
+
+------------------------------------------------
+
+Title: AMD Ryzen 5 5500 Desktop Processor
+Description: The Ryzen 5 5500 offers impressive gaming and multitasking performance with Zen 3 architecture. It’s a great value CPU for gamers and productivity users looking to build a powerful mid-range system.
+Specs: 6 Cores / 12 Threads, Base Clock 3.6GHz, Boost up to 4.2GHz, Socket AM4, 16MB L3 Cache, 65W TDP
+
+------------------------------------------------
+
+Title: AMD Ryzen 7 5800X Desktop Processor
+Description: The Ryzen 7 5800X delivers high-end desktop performance with AMD’s Zen 3 architecture. Perfect for demanding games, streaming, and content creation, it offers powerful multi-core performance in a single chip.
+Specs: 8 Cores / 16 Threads, Base Clock 3.8GHz, Boost up to 4.7GHz, Socket AM4, 32MB Cache, 105W TDP
+
+------------------------------------------------
+
+Title: AMD Ryzen 7 7800X3D Gaming Processor
+Description: The Ryzen 7 7800X3D is one of the most powerful gaming processors available, featuring AMD’s revolutionary 3D V-Cache technology. It delivers exceptional gaming performance with reduced latency and improved frame rates.
+Specs: 8 Cores / 16 Threads, Boost up to 5.0GHz, Socket AM5, 96MB 3D V-Cache, DDR5 Support, 120W TDP
+
+---
+
+Graphics Cards (GPU)
+
+Title: ASUS ROG Strix GeForce RTX 4070 12GB Graphics Card
+Description: The ASUS ROG Strix RTX 4070 is built for ultra-smooth gaming and high-performance creative workloads. With advanced cooling and NVIDIA’s latest architecture, it delivers excellent frame rates and ray tracing performance.
+Specs: 12GB GDDR6X VRAM, NVIDIA Ada Lovelace Architecture, Ray Tracing & DLSS 3 Support, Triple-Fan Cooling, PCIe 4.0
+
+------------------------------------------------
+
+Title: ASUS ROG Strix GeForce RTX 5080 16GB Graphics Card
+Description: The RTX 5080 offers next-generation graphics performance for enthusiasts and professionals. Designed for ultra-high resolution gaming and demanding workloads, it pushes graphical fidelity to the next level.
+Specs: 16GB GDDR7 VRAM, Advanced Ray Tracing, AI-Powered DLSS, PCIe 5.0 Support, High-Performance Cooling
+
+------------------------------------------------
+
+Title: ASUS ROG Strix GeForce RTX 5090 24GB Graphics Card
+Description: The RTX 5090 represents the peak of gaming GPU performance, designed for 4K and 8K gaming, AI workloads, and advanced rendering tasks. Built with cutting-edge technology and premium cooling.
+Specs: 24GB GDDR7 VRAM, Extreme Ray Tracing Performance, PCIe 5.0 Interface, AI-Enhanced Graphics, Triple-Fan Cooling
+
+------------------------------------------------
+
+Title: Gigabyte GeForce RTX 3060 12GB Graphics Card
+Description: The RTX 3060 offers fantastic 1080p and 1440p gaming performance with support for ray tracing and DLSS. It’s a great upgrade for gamers looking for modern features and solid performance.
+Specs: 12GB GDDR6 VRAM, Ray Tracing Cores, DLSS Support, PCIe 4.0
+
+------------------------------------------------
+
+Title: Gigabyte GeForce RTX 4060 8GB Graphics Card
+Description: Built on NVIDIA’s latest architecture, the RTX 4060 delivers efficient and powerful gaming performance. Ideal for modern esports titles and demanding AAA games at high settings.
+Specs: 8GB GDDR6 VRAM, DLSS 3 Support, PCIe 4.0 Interface
+
+------------------------------------------------
+
+Title: Gigabyte GeForce RTX 4090 24GB Graphics Card
+Description: The RTX 4090 is a flagship GPU designed for extreme gaming and professional workloads. It provides unmatched performance for 4K gaming, rendering, and AI processing.
+Specs: 24GB GDDR6X VRAM, Ray Tracing Cores, DLSS 3, PCIe 4.0
+
+------------------------------------------------
+
+Title: ASRock Radeon RX 7600 8GB Graphics Card
+Description: The RX 7600 provides excellent 1080p gaming performance with AMD RDNA 3 architecture. It balances performance, efficiency, and affordability for mainstream gamers.
+Specs: 8GB GDDR6 VRAM, RDNA 3 Architecture, PCIe 4.0
+
+------------------------------------------------
+
+Title: Gigabyte Radeon RX 7600 XT 16GB Graphics Card
+Description: Designed for high-performance 1080p and 1440p gaming, the RX 7600 XT offers enhanced memory capacity and improved graphics performance.
+Specs: 16GB GDDR6 VRAM, RDNA 3 Architecture, PCIe 4.0
+
+------------------------------------------------
+
+Title: Gigabyte Radeon RX 5700 XT 8GB Graphics Card
+Description: A powerful RDNA-based graphics card capable of delivering smooth 1440p gaming performance with modern graphics technologies.
+Specs: 8GB GDDR6 VRAM, PCIe 4.0, AMD RDNA Architecture
+
+------------------------------------------------
+
+Title: MSI Radeon RX 560 AERO ITX 4GB Graphics Card
+Description: Compact and efficient graphics card designed for small form factor PCs and entry-level gaming systems.
+Specs: 4GB GDDR5 VRAM, Single Fan Cooling, PCIe 3.0
+
+------------------------------------------------
+
+Title: AMD Radeon RX 470 4GB Graphics Card
+Description: A dependable GPU designed for budget gaming systems, capable of handling many popular games at 1080p resolution.
+Specs: 4GB GDDR5 VRAM, PCIe 3.0, DirectX 12 Support
+
+---
+
+Memory (RAM)
+
+Title: Kingston HyperX Fury 16GB DDR4 RAM
+Description: HyperX Fury DDR4 memory delivers reliable high-speed performance for gaming PCs and workstations. Designed for easy plug-and-play upgrades.
+Specs: 16GB Capacity, DDR4, 3200MHz Speed, Low Latency, Heat Spreader
+
+------------------------------------------------
+
+Title: Samsung 16GB DDR4 Desktop Memory
+Description: Samsung desktop memory modules are known for their reliability and consistent performance. Ideal for system upgrades and stable multitasking performance.
+Specs: 16GB DDR4, 3200MHz, Low Power Consumption
+
+------------------------------------------------
+
+Title: XPG Gammix D30 16GB DDR4 Gaming RAM
+Description: The XPG Gammix D30 is designed for gamers who want speed and style. Its aggressive heat spreader design ensures reliable performance under heavy workloads.
+Specs: 16GB DDR4, 3200MHz Speed, Gaming Heat Spreader
+
+------------------------------------------------
+
+Title: Gloway 8GB DDR3 1600MHz Memory
+Description: A dependable DDR3 memory module designed for older desktop systems that need a performance boost.
+Specs: 8GB DDR3, 1600MHz Speed
+
+---
+
+Storage
+
+Title: SanDisk 512GB SATA SSD
+Description: The SanDisk 512GB SSD offers fast boot times and improved system responsiveness compared to traditional hard drives. Perfect for upgrading older systems.
+Specs: 512GB Capacity, SATA III Interface, Up to 560MB/s Read Speed
+
+------------------------------------------------
+
+Title: Crucial 512GB SATA SSD
+Description: Crucial SATA SSDs deliver reliable performance and faster load times for everyday computing and gaming systems.
+Specs: 512GB Capacity, SATA III, High-Speed NAND Storage
+
+------------------------------------------------
+
+Title: Crucial P3 1TB NVMe SSD
+Description: The Crucial P3 NVMe SSD provides lightning-fast storage performance for modern systems, significantly reducing load times for games and applications.
+Specs: 1TB Capacity, PCIe Gen3 NVMe, Up to 3500MB/s Read Speed
+
+------------------------------------------------
+
+Title: WD Blue SN580 1TB NVMe SSD
+Description: WD Blue SN580 delivers reliable high-speed storage performance for gaming and productivity systems.
+Specs: 1TB NVMe SSD, PCIe Gen4 Interface, High Efficiency Controller
+
+------------------------------------------------
+
+Title: WD Green 480GB SATA SSD
+Description: WD Green SSDs provide efficient storage upgrades with low power consumption and solid reliability.
+Specs: 480GB Capacity, SATA III, Solid State NAND
+
+------------------------------------------------
+
+Title: WD Red SA500 500GB NAS SSD
+Description: The WD Red SA500 is optimized for NAS systems and always-on workloads, delivering dependable performance and endurance.
+Specs: 500GB SATA SSD, NAS Optimized Firmware
+
+------------------------------------------------
+
+Title: Zebronics ZEB-MN52 512GB SSD
+Description: A reliable SATA SSD designed for affordable storage upgrades and improved system responsiveness.
+Specs: 512GB Capacity, SATA III Interface
+
+------------------------------------------------
+
+Title: WD Black 2TB Performance Hard Drive (WD2002FAEX)
+Description: The WD Black series is designed for performance-focused systems that require large storage capacity and reliability.
+Specs: 2TB Capacity, 7200RPM, SATA III Interface, 64MB Cache
+
+------------------------------------------------
+
+Title: WD Blue 1TB Hard Drive
+Description: WD Blue hard drives offer dependable storage for everyday computing tasks and file storage.
+Specs: 1TB Capacity, 7200RPM, SATA III Interface
+
+---
+
+Power Supplies (PSU)
+
+Title: Corsair CS650M 650W Semi-Modular Power Supply
+Description: The Corsair CS650M provides stable and efficient power delivery with semi-modular cabling for cleaner PC builds. Ideal for mid-range gaming systems.
+Specs: 650W Output, 80 Plus Gold Efficiency, Semi-Modular Cables
+
+------------------------------------------------
+
+Title: EVGA 850BQ 850W Power Supply
+Description: A high-capacity power supply designed for demanding gaming systems and powerful GPUs.
+Specs: 850W Output, 80 Plus Bronze Efficiency, Semi-Modular Design
+
+------------------------------------------------
+
+Title: Antec Atom B650 650W Power Supply
+Description: The Antec Atom B650 delivers stable and efficient power for modern gaming PCs and workstations.
+Specs: 650W Output, Active PFC, 120mm Silent Fan
+
+------------------------------------------------
+
+Title: XPlus Power 725W Power Supply
+Description: A high-capacity PSU designed for gaming builds requiring reliable power delivery for multiple components.
+Specs: 725W Output, Standard ATX Form Factor, Cooling Fan

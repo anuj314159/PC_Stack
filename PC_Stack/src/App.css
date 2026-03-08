@@ -59,6 +59,16 @@
     font-size: 1rem;
     color: var(--text-color);
   }
+
+  /* real image styling */
+  .product-card img.product-image,
+  .brand-card img.brand-logo {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+  }
   
   .product-card h3, .brand-card h3 {
     margin: 0.5rem 0;
