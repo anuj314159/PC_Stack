@@ -1,11 +1,11 @@
 import React from 'react';
 import Container from './Container';
-import { ram } from '../utils/products';
+import { psus } from '../utils/products';
 
-const Ram: React.FC = () => {
+const Psu: React.FC = () => {
   return (
-    <Container title="RAM" iconName="hardware-chip-outline">
-      {ram.map((item) => (
+    <Container title="Power Supplies" iconName="flash-outline">
+      {psus.map((item) => (
         <div className="product-card" key={item.name}>
           {item.image ? (
             <img src={item.image} alt={item.name} className="product-image" />
@@ -20,4 +20,4 @@ const Ram: React.FC = () => {
   );
 };
 
-export default Ram;
+export default Psu;

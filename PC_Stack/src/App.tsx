@@ -13,6 +13,7 @@ import Amd from './components/Amd';
 import Intel from './components/Intel';
 import WesternDigital from './components/WesternDigital';
 import Corsair from './components/Corsair';
+import Psu from './components/Psu';
 
 const App: React.FC = () => {
   const [route, setRoute] = useState(window.location.hash || '#home');
@@ -47,6 +48,8 @@ const App: React.FC = () => {
         return <Ram />;
       case '#storage':
         return <Storage />;
+      case '#psu':
+        return <Psu />;
       case '#motherboards':
         return <Motherboard />;
       case '#brands':

@@ -1,9 +1,10 @@
-// parsed product information and helper to access CPU/GPU lists
-import productInfo from '../assets/product-information.txt?raw';
+// parsed product information and helper to access categorized lists
+import rawText from '../assets/products-images/products.txt?raw';
 
 export interface Product {
   name: string;
   details: string;
+  category: string;
   image?: string;
 }
 
@@ -16,8 +17,9 @@ function slugify(text: string) {
 }
 
 // import all images from the products-images folder
-const images: Record<string, { default: string }> = (import.meta as any).globEager(
-  '../assets/products-images/*.{jpg,png,jpeg,svg}'
+const images: Record<string, { default: string }> = (import.meta as any).glob(
+  '../assets/products-images/*.{jpg,png,jpeg,svg}',
+  { eager: true }
 ) as any;
 
 const imageMap: Record<string, string> = {};
@@ -30,34 +32,70 @@ for (const path in images) {
   }
 }
 
-// split on the separator (*) and trim entries
-const rawEntries = productInfo
-  .split(/\r?\n\*/)
-  .map((l) => l.trim())
-  .filter(Boolean);
+// turn the raw text into a list of product entries with category
+function parseProducts(text: string): Product[] {
+  const lines = text.split(/\r?\n/);
+  const products: Product[] = [];
+  let current: { title: string; description: string; specs: string } | null = null;
+  let category = '';
 
-const products: Product[] = rawEntries.map((line) => {
-  const [name, ...rest] = line.split(' - ');
-  const details = rest.join(' - ');
-  const slug = slugify(name);
-  // attempt to find the best matching image: either exact or by segments
-  let image: string | undefined = imageMap[slug];
-  if (!image) {
-    const slugClean = slug.replace(/-/g, '');
-    for (const [fileSlug, url] of Object.entries(imageMap)) {
-      const fileClean = fileSlug.replace(/-/g, '');
-      const segments = fileSlug.split('-').filter(Boolean);
-      const allPresent = segments.every(seg => slug.includes(seg));
-      if (slugClean.includes(fileClean) || fileClean.includes(slugClean) || allPresent) {
-        image = url;
-        break;
-      }
+  const flush = () => {
+    if (current) {
+      const detailsParts: string[] = [];
+      if (current.description) detailsParts.push(current.description);
+      if (current.specs) detailsParts.push(`Specs: ${current.specs}`);
+      products.push({
+        name: current.title,
+        details: detailsParts.join(' '),
+        category,
+      });
+      current = null;
+    }
+  };
+
+  for (const raw of lines) {
+    const line = raw.trim();
+    if (!line) continue; // skip empty
+
+    if (/^[-]{2,}/.test(line)) {
+      // separator between products
+      flush();
+      continue;
+    }
+
+    if (/^Title:/i.test(line)) {
+      flush();
+      current = { title: line.replace(/^Title:\s*/i, ''), description: '', specs: '' };
+      continue;
+    }
+
+    if (/^Description:/i.test(line) && current) {
+      current.description = line.replace(/^Description:\s*/i, '');
+      continue;
+    }
+
+    if (/^Specs:/i.test(line) && current) {
+      current.specs = line.replace(/^Specs:\s*/i, '');
+      continue;
+    }
+
+    // if we get here and no current product is being built, treat as a category heading
+    if (!current) {
+      category = line;
     }
   }
-  return { name, details, image };
-});
+  flush();
+  return products;
+}
 
-const isCpu = (p: Product) => /\b(Core|Ryzen)\b/i.test(p.name);
+const allProducts = parseProducts(rawText);
 
-export const cpus = products.filter(isCpu);
-export const gpus = products.filter((p) => !isCpu(p));
+// helper arrays by category
+export const cpus = allProducts.filter(p => /cpu/i.test(p.category));
+export const gpus = allProducts.filter(p => /gpu/i.test(p.category));
+export const ram = allProducts.filter(p => /ram/i.test(p.category));
+export const storage = allProducts.filter(p => /storage/i.test(p.category));
+export const psus = allProducts.filter(p => /psu/i.test(p.category));
+
+// export full list if needed
+export const products = allProducts;

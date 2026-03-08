@@ -1,6 +1,15 @@
 import React, { useState, useContext } from 'react';
 import './Header.css';
 import { ThemeContext } from '../ThemeContext';
+//import 'ionicons/dist/ionicons/ionicons.css';
+// import "ionicons/dist/css/ionicons.min.css";
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'ion-icon': any;
+    }
+  }
+}
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,6 +31,7 @@ const Header: React.FC = () => {
           <li><a href="#gpus" onClick={() => setMenuOpen(false)}>GPUs</a></li>
           <li><a href="#ram" onClick={() => setMenuOpen(false)}>RAM</a></li>
           <li><a href="#storage" onClick={() => setMenuOpen(false)}>Storage</a></li>
+          <li><a href="#psu" onClick={() => setMenuOpen(false)}>Power Supplies</a></li>
           <li><a href="#motherboards" onClick={() => setMenuOpen(false)}>Motherboards</a></li>
           <li><a href="#brands" onClick={() => setMenuOpen(false)}>Brands</a></li>
         </ul>
