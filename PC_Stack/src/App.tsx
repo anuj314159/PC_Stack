@@ -14,9 +14,12 @@ import Intel from './components/Intel';
 import WesternDigital from './components/WesternDigital';
 import Corsair from './components/Corsair';
 import Psu from './components/Psu';
+import Auth from './components/Auth';
+import { authService } from './api/authService';
 
 const App: React.FC = () => {
   const [route, setRoute] = useState(window.location.hash || '#home');
+  const [isLoggedIn, setIsLoggedIn] = useState(authService.isAuthenticated());
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -28,6 +31,16 @@ const App: React.FC = () => {
       window.removeEventListener('hashchange', handleHashChange);
     };
   }, []);
+
+  const handleLoginSuccess = () => {
+    setIsLoggedIn(true);
+  };
+
+  const handleLogout = () => {
+    authService.logout();
+    setIsLoggedIn(false);
+    window.location.hash = '#home';
+  };
 
   const renderContent = () => {
     switch (route) {
@@ -52,6 +65,8 @@ const App: React.FC = () => {
         return <Psu />;
       case '#motherboards':
         return <Motherboard />;
+      case '#auth':
+        return <Auth onLoginSuccess={handleLoginSuccess} />;
       case '#brands':
         return (
           <Container title="Brands" iconName="bookmark-outline">
@@ -76,7 +91,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <Header />
+      <Header isLoggedIn={isLoggedIn} onLogout={handleLogout} />
       <main>
         {renderContent()}
       </main>
@@ -86,4 +101,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-

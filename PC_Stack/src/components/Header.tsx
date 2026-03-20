@@ -11,7 +11,12 @@ declare global {
   }
 }
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  isLoggedIn: boolean;
+  onLogout: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ isLoggedIn, onLogout }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { theme, toggleTheme } = useContext(ThemeContext);
 
@@ -34,6 +39,11 @@ const Header: React.FC = () => {
           <li><a href="#psu" onClick={() => setMenuOpen(false)}>Power Supplies</a></li>
           <li><a href="#motherboards" onClick={() => setMenuOpen(false)}>Motherboards</a></li>
           <li><a href="#brands" onClick={() => setMenuOpen(false)}>Brands</a></li>
+          {isLoggedIn ? (
+            <li><a href="#home" onClick={() => { onLogout(); setMenuOpen(false); }}>Logout</a></li>
+          ) : (
+            <li><a href="#auth" onClick={() => setMenuOpen(false)}>Login</a></li>
+          )}
         </ul>
         
       </nav>
