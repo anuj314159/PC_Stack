@@ -7,7 +7,6 @@ const apiClient = axios.create({
   },
 });
 
-// Request interceptor to add the token to every request
 apiClient.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
   if (token) {
@@ -16,7 +15,6 @@ apiClient.interceptors.request.use((config) => {
   return config;
 });
 
-// Response interceptor to handle session expiration
 apiClient.interceptors.response.use(
   (response) => response,
   (error) => {

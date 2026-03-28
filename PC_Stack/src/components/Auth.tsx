@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Container from './Container';
 import { authService } from '../api/authService';
+import {authService as authServiceV2} from '../api/authService';
 
 interface AuthProps {
   onLoginSuccess: () => void;
@@ -22,7 +23,6 @@ const Auth: React.FC<AuthProps> = ({ onLoginSuccess }) => {
         await authService.login(email, password);
       } else {
         await authService.register({ email, password });
-        // Automatically log in after registration
         await authService.login(email, password);
       }
       onLoginSuccess();

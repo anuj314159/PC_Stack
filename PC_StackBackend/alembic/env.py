@@ -7,10 +7,9 @@ import os, sys
 config = context.config
 fileConfig(config.config_file_name)
 
-# ensure package import path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from app.models import Base  # noqa: E402
+from app.models import Base
 
 target_metadata = Base.metadata
 

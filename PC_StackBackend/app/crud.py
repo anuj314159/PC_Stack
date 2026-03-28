@@ -2,6 +2,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
 from . import models, schemas
 from passlib.context import CryptContext
+import hashlib
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
@@ -11,7 +12,7 @@ def get_user_by_email(db: Session, email: str):
 
 
 def create_user(db: Session, user: schemas.UserCreate):
-    hashed = pwd_context.hash(user.password)
+    hashed = pwd_context.hash(hashlib.sha256(user.password.encode()).hexdigest())
     db_user = models.User(email=user.email, hashed_password=hashed, full_name=user.full_name)
     try:
         db.add(db_user)
@@ -27,7 +28,7 @@ def verify_password(plain, hashed):
     if not hashed:
         return False
     try:
-        return pwd_context.verify(plain, hashed)
+        return pwd_context.verify(hashlib.sha256(plain.encode()).hexdigest(), hashed)
     except Exception:
         return False
 

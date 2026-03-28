@@ -15,7 +15,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Create DB tables at startup (simple local setup)
 Base.metadata.create_all(bind=engine)
 
 app.include_router(auth.router, prefix="/api/auth", tags=["auth"])

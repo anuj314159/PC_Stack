@@ -1,8 +1,6 @@
 import React, { useState, useContext } from 'react';
 import './Header.css';
 import { ThemeContext } from '../ThemeContext';
-//import 'ionicons/dist/ionicons/ionicons.css';
-// import "ionicons/dist/css/ionicons.min.css";
 declare global {
   namespace JSX {
     interface IntrinsicElements {
@@ -22,7 +20,7 @@ const Header: React.FC<HeaderProps> = ({ isLoggedIn, onLogout }) => {
 
   return (
     <header className="header">
-      <div className="logo"><a href="#home">PC_Stack</a></div>
+      <div className="logo"><a href="#home">PC Stack</a></div>
       <div style={{display: 'flex', alignItems: 'center', gap: '1rem'}}>
         
         <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>

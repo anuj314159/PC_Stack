@@ -46,7 +46,7 @@ const App: React.FC = () => {
     switch (route) {
       case '#home':
         return (
-          <Container title="Welcome to PC_Stack!" iconName="home-outline">
+          <Container title="Welcome to PC Stack!" iconName="home-outline">
             <div className="home-content">
               <h2>Your one-stop shop for PC components</h2>
               <p>Explore our wide range of products and build your dream PC today.</p>
@@ -79,7 +79,7 @@ const App: React.FC = () => {
         );
       default:
         return (
-          <Container title="Welcome to PC_Stack!" iconName="home-outline">
+          <Container title="Welcome to PC Stack!" iconName="home-outline">
             <div className="home-content">
               <h2>Your one-stop shop for PC components</h2>
               <p>Explore our wide range of products and build your dream PC today.</p>

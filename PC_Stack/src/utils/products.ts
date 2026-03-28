@@ -1,4 +1,3 @@
-// parsed product information and helper to access categorized lists
 import rawText from '../assets/products-images/products.txt?raw';
 
 export interface Product {
@@ -8,7 +7,6 @@ export interface Product {
   image?: string;
 }
 
-// simple slugify helper to match filenames
 function slugify(text: string) {
   return text
     .toLowerCase()
@@ -16,7 +14,6 @@ function slugify(text: string) {
     .replace(/^-+|-+$/g, '');
 }
 
-// import all images from the products-images folder
 const images: Record<string, { default: string }> = (import.meta as any).glob(
   '../assets/products-images/*.{jpg,png,jpeg,svg}',
   { eager: true }
@@ -32,7 +29,6 @@ for (const path in images) {
   }
 }
 
-// turn the raw text into a list of product entries with category
 function parseProducts(text: string): Product[] {
   const lines = text.split(/\r?\n/);
   const products: Product[] = [];
@@ -55,10 +51,9 @@ function parseProducts(text: string): Product[] {
 
   for (const raw of lines) {
     const line = raw.trim();
-    if (!line) continue; // skip empty
+    if (!line) continue;
 
     if (/^[-]{2,}/.test(line)) {
-      // separator between products
       flush();
       continue;
     }
@@ -79,7 +74,6 @@ function parseProducts(text: string): Product[] {
       continue;
     }
 
-    // if we get here and no current product is being built, treat as a category heading
     if (!current) {
       category = line;
     }
@@ -90,12 +84,10 @@ function parseProducts(text: string): Product[] {
 
 const allProducts = parseProducts(rawText);
 
-// helper arrays by category
 export const cpus = allProducts.filter(p => /cpu/i.test(p.category));
 export const gpus = allProducts.filter(p => /gpu/i.test(p.category));
 export const ram = allProducts.filter(p => /ram/i.test(p.category));
 export const storage = allProducts.filter(p => /storage/i.test(p.category));
 export const psus = allProducts.filter(p => /psu/i.test(p.category));
 
-// export full list if needed
 export const products = allProducts;
