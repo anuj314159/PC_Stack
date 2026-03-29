@@ -15,6 +15,7 @@ import WesternDigital from './components/WesternDigital';
 import Corsair from './components/Corsair';
 import Psu from './components/Psu';
 import Auth from './components/Auth';
+//import { authService } from './api/authService.js';
 import { authService } from './api/authService';
 
 const App: React.FC = () => {

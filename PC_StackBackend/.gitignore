@@ -1,0 +1,6 @@
+.md
+.env
+node-modules
+bin
+venv
+alembic

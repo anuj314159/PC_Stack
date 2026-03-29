@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Container from './Container';
 import { authService } from '../api/authService';
-import {authService as authServiceV2} from '../api/authService';
 
 interface AuthProps {
   onLoginSuccess: () => void;
